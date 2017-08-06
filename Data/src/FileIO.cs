@@ -105,7 +105,6 @@ namespace Data
                 string pathToFile = new DirectoryInfo(DNC_DATA_FILE).FullName;
                 Console.WriteLine(pathToFile);
                 Process.Start("cmd.exe", "/C DEL /Q /F \"DATA.sqlite\"");
-                Process.Start("cmd.exe", "/C DEL /Q /F \"DATA.dat\"");
             }
         }
     }
