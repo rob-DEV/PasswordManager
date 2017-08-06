@@ -23,12 +23,17 @@ namespace PasswordManagerUI.Forms
         #region Login
         private void ValidateMasterPassword()
         {
-            if (Data.FileIO.ValidateMasterPassword(txtMasterPassword.Text) == Data.ValidationResponse.Accepted)
+            Data.ValidationResponse response = Data.FileIO.ValidateMasterPassword(txtMasterPassword.Text);
+            if (response == Data.ValidationResponse.Accepted)
             {
                 MAIN mainForm = new MAIN();
                 mainForm.Show();
                 this.Hide();
                 mainForm.FormClosing += delegate { this.Close(); };
+            }
+            else if(response == Data.ValidationResponse.Refused)
+            {
+                lblResponse.Text = "Password Incorrect! Cannot decrypt database.";
             }
         }
         private void btnLogin_Click(object sender, EventArgs e)

@@ -1,5 +1,9 @@
 ﻿namespace Data
 {
+    /// <summary>
+    /// Serializable class for managing user logins
+    /// </summary>
+    [System.Serializable]
     public class Login
     {
         public int id;

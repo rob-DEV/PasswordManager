@@ -60,7 +60,7 @@
             // 
             this.txtMasterPassword.Location = new System.Drawing.Point(49, 144);
             this.txtMasterPassword.Name = "txtMasterPassword";
-            this.txtMasterPassword.PasswordChar = '*';
+            this.txtMasterPassword.PasswordChar = '•';
             this.txtMasterPassword.Size = new System.Drawing.Size(229, 20);
             this.txtMasterPassword.TabIndex = 1;
             this.txtMasterPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMasterPassword_KeyUp);
@@ -82,7 +82,7 @@
             this.lblResponse.BackColor = System.Drawing.SystemColors.Control;
             this.lblResponse.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResponse.ForeColor = System.Drawing.Color.Red;
-            this.lblResponse.Location = new System.Drawing.Point(42, 182);
+            this.lblResponse.Location = new System.Drawing.Point(13, 182);
             this.lblResponse.Name = "lblResponse";
             this.lblResponse.Size = new System.Drawing.Size(0, 20);
             this.lblResponse.TabIndex = 1;

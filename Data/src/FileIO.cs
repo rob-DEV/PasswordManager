@@ -23,6 +23,12 @@ namespace Data
         /// </summary>
         public static string MASTER_PASSWORD = "";
 
+        /// <summary>
+        /// Takes the users input password and attempts decrypt the file, 
+        /// returning the apportiate response handled by the MAIN form
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static ValidationResponse ValidateMasterPassword(string password)
         {
             if (isFirstTimeUser())
@@ -43,12 +49,12 @@ namespace Data
             }
                 
         }
+
         /// <summary>
         /// Checks to see whether an encrypted database exists
         /// this then determines if the user is using the PM for the first time
         /// </summary>
         /// <returns></returns>
-
         public static bool isFirstTimeUser()
         {
             if (File.Exists(ENC_DATA_FILE))
@@ -57,6 +63,10 @@ namespace Data
                 return true;
         }
 
+        /// <summary>
+        /// Creates the db file and table and initally creates it in its encrypted form
+        /// </summary>
+        /// <param name="pass"></param>
         public static void CreateAndEncryptDatabase(string pass)
         {
             using(FileStream fs = new FileStream(DNC_DATA_FILE, FileMode.Create))

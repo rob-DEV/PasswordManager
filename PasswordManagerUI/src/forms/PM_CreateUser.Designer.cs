@@ -52,7 +52,7 @@
             // 
             this.txtMasterPasswordRepeat.Location = new System.Drawing.Point(31, 140);
             this.txtMasterPasswordRepeat.Name = "txtMasterPasswordRepeat";
-            this.txtMasterPasswordRepeat.PasswordChar = '*';
+            this.txtMasterPasswordRepeat.PasswordChar = '•';
             this.txtMasterPasswordRepeat.Size = new System.Drawing.Size(229, 20);
             this.txtMasterPasswordRepeat.TabIndex = 4;
             // 
@@ -92,7 +92,7 @@
             // 
             this.txtMasterPassword.Location = new System.Drawing.Point(31, 114);
             this.txtMasterPassword.Name = "txtMasterPassword";
-            this.txtMasterPassword.PasswordChar = '*';
+            this.txtMasterPassword.PasswordChar = '•';
             this.txtMasterPassword.Size = new System.Drawing.Size(229, 20);
             this.txtMasterPassword.TabIndex = 4;
             // 

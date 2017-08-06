@@ -7,10 +7,13 @@ namespace Data
 {
     public static class DB
     {
+        /// <summary>
+        /// The default connection location for the database in the exe root.
+        /// </summary>
         private const string DataString = "Data Source = DATA.sqlite; Version=3;";
 
         /// <summary>
-        /// Connection to the database
+        /// Returns a connection to the database
         /// </summary>
         /// <returns></returns>
         public static SQLiteConnection GetDataCon()
@@ -27,6 +30,9 @@ namespace Data
             return null;
         }
 
+        /// <summary>
+        /// Creates the default empty tables in the sqlite db
+        /// </summary>
         public static void CreateDB()
         {
             SQLiteConnection con = GetDataCon();
@@ -45,11 +51,6 @@ namespace Data
 
     public class DataReader
     {
-        public DataReader()
-        {
-
-        }
-
         /// <summary>
         /// Returns a list of logins from the database
         /// </summary>
@@ -90,11 +91,6 @@ namespace Data
 
     public class DataWriter
     {
-        public DataWriter()
-        {
-
-        }
-
         /// <summary>
         /// Insert a single login into the database
         /// </summary>
