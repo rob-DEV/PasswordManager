@@ -33,6 +33,7 @@ namespace Data
             {
                 if (DecryptDatabase(password))
                 {
+                    MASTER_PASSWORD = password;
                     return ValidationResponse.Accepted;
                 }
                 else
@@ -89,6 +90,7 @@ namespace Data
         public static void EncryptDatabase(string pass)
         {
             Security.Security.EncryptFile(DNC_DATA_FILE, pass);
+            MASTER_PASSWORD = pass;
         }
 
         /// <summary>
